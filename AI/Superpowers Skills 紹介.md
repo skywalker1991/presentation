@@ -13,7 +13,7 @@ flowchart LR
 
 ## 2. Superpowersとは何か
 
-AIの「能力」ではなく「行動」を制御するSkillのコレクション。Promptで毎回伝えなくても、Claudeが自律的に遵守する。
+Promptで毎回やり方を伝えなくても、Claudeが自律的に遵守できるSkillのコレクション。AIの「能力」ではなく「行動」を制御する。
 
 ```mermaid
 flowchart LR
@@ -29,7 +29,7 @@ flowchart LR
 | brainstorming | 要件を明確化し、specとして保存 |
 | writing-plans | specをタスクに分解 |
 | subagent-driven-development | タスクごとにagentを分離 |
-| test-driven-development | テストなしのコードは削除してやり直し |
+| test-driven-development | テストを前提に実装を進める |
 
 ## 3. 私の使い方
 
