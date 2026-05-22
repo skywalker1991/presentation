@@ -46,7 +46,7 @@ flowchart TD
     H --> T
 
     subgraph T ["各ステップで繰り返す（技術選定・データモデル・API設計…）"]
-        L1["brainstorming"] --> L2["spec保存"] --> L3["writing-plans"] --> L4["test-driven-development"] --> L5["実装"]
+        L1["brainstorming"] --> L2["spec保存"] --> L3["writing-plans"] --> L4["subagent-driven-development"] --> L5["実装"]
     end
 
     T -. "問題発見時\n前のドキュメントに戻る" .-> H
