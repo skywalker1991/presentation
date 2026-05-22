@@ -2,7 +2,7 @@
 
 ## 1. Skillとは何か
 
-操作規範を書いたMarkdownファイル。Agentがタスク前に自動判断して読み込み、従う。
+SkillはそのPromptを専門家レベルでまとめたMarkdownファイルです。Claudeがタスクの内容を見て自分で判断して読み込んで、その通りに動いてくれます。
 
 ```mermaid
 flowchart LR
@@ -13,23 +13,24 @@ flowchart LR
 
 ## 2. Superpowersとは何か
 
-Promptで毎回やり方を伝えなくても、Claudeが自律的に遵守できるSkillのコレクション。AIの「能力」ではなく「行動」を制御する。
-
-```mermaid
-flowchart LR
-    P["Prompt\n毎回指示が必要\n従うかはAI次第"]
-    S["Superpowers\nSkillとして固化\n自動で遵守"]
-    P -.-> S
-```
+SuperpowersはGitHubで公開されているオープンソースのSkillコレクションで、開発の各フェーズをカバーするSkillが揃っています。プロジェクトの最初や新しい機能を作るときに特に使えるものだと思っています。
 
 **主なSkill：**
 
-| Skill | 内容 |
-|---|---|
-| brainstorming | 要件を明確化し、specとして保存 |
-| writing-plans | specをタスクに分解 |
-| subagent-driven-development | タスクごとにagentを分離 |
-| test-driven-development | テストを前提に実装を進める |
+| Skill | 内容 | アウトプット |
+|---|---|---|
+| brainstorming | 要件を明確化し設計を固める | `docs/superpowers/specs/` にspec保存 |
+| writing-plans | specをタスクに分解 | `docs/superpowers/plans/` にplan保存 |
+| subagent-driven-development | タスクごとにagentを分離して実行 | 実装コード |
+| test-driven-development | テストなしのコードは削除してやり直し | テスト＋実装コード |
+| systematic-debugging | 根本原因を段階的に分析して解決 | 修正コード |
+
+**インストール方法**
+```bash
+# claude code terminal 
+/plugin install superpowers@claude-plugins-official
+```
+
 
 ## 3. 私の使い方
 
